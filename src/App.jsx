@@ -1,14 +1,16 @@
-import Example from "./components/Example"
 import './App.css'
+import { Box } from '@mui/material'
+import Table from './components/Table'
+import data from './Data'
 
 function App() {
 
   return (
-    <>
-      hello
-
-      <Example/>
-    </>
+    <div className='home'>
+      
+      <div className='head'>Reunion Table Assignment</div>
+      <Table data={data} />
+    </div>
   )
 }
 

@@ -9,7 +9,6 @@ import {
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {Box } from '@mui/material';
-import  data  from './Data';
 import { useMemo, useState } from 'react';
 import GroupBy from './GroupBy';
 import SortBy from './SortBy';
@@ -17,12 +16,10 @@ import FilterBy from './FilterBy';
 
 
 
-const Example = () => {
-
-
+const Table = ({data}) => {
 
   const columns = useMemo(
-    //column definitions...
+
     () => [{
       header: 'Id',
       accessorKey: 'id',
@@ -104,6 +101,10 @@ const Example = () => {
     enableFacetedValues: true,
   enableColumnActions: false,
   enableGrouping: true,
+
+  
+
+  
   
   });
 
@@ -134,11 +135,12 @@ const Example = () => {
     <Box sx={{ border: 'gray 1px solid', padding: '16px' }}>
       {/* Our Custom External Top Toolbar */}
       <Box
-        sx={(theme) => ({
+        sx={() => ({
           display: 'flex',
-          backgroundColor: 'inherit',
+          backgroundColor: 'white',
           borderRadius: '4px',
           flexDirection: 'row',
+          color: 'white',
           gap: '16px',
           justifyContent: 'right',
           padding: '24px 16px',
@@ -187,4 +189,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Table;

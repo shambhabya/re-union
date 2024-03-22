@@ -5,8 +5,8 @@ function GroupBy({table}) {
   return (
     
 
-      <Box sx={{border: '1px solid gray', padding: '20px 10px'}} width={400}>
-              <Box sx={{padding: '10px', fontWeight: '600', fontSize: '20px'}}>
+      <Box sx={{border: '1px solid gray', padding: '10px 5px' , backgroundColor: 'rgb(66, 66, 70)'}} width={400}>
+              <Box sx={{padding: '10px', fontWeight: '600', fontSize: '20px' , color: 'white'}}>
                 Create Groups
               </Box>
 
@@ -17,7 +17,7 @@ function GroupBy({table}) {
                         <Box >
                         {header.column.getCanGroup() ? (
                           // If the header can be grouped, let's add a toggle
-                          <Box sx={{ padding: '10px', border: '1px solid #bdbdbd', margin: '5px'}} key={header.id} display="flex" alignItems="center" height={40}
+                          <Box sx={{ padding: '10px', border: '1px solid #bdbdbd', margin: '5px', backgroundColor: 'white'}} key={header.id} display="flex" alignItems="center" height={40}
                             {...{
                               onClick: header.column.getToggleGroupingHandler(),
                               style: {
@@ -34,7 +34,7 @@ function GroupBy({table}) {
                       ))
                     ))
                 }
-                <Box sx={{ padding: '5px', border: '1px solid #b3e5fc', margin: '5px', "&:hover":{cursor: "pointer"}}} display="flex" alignItems="center" justifyContent="center" height={40} onClick={()=>table.resetGrouping()}>Reset Grouping</Box>
+                <Box sx={{ padding: '5px', border: '1px solid #b3e5fc' ,color: 'white' , fontSize: '25px', margin: '5px', "&:hover":{cursor: "pointer"}}} display="flex" alignItems="center" justifyContent="center" height={40} onClick={()=>table.resetGrouping()}>Reset Grouping</Box>
               </Stack>
           </Box>
     
